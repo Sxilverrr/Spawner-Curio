@@ -1,9 +1,11 @@
-# Spawner Curio
+<img width="768" height="456" alt="banner" src="https://github.com/user-attachments/assets/b4b89ece-8010-4621-9363-ac1ca0a77dfd" />
 
 A Curios necklace that makes nearby mob spawners run faster.
 
 Wear the **Spawner Necklace** in a curio slot and spawners around you will spawn faster.
 Right-click it in hand to switch it off and on.
+
+Requires [Curios API.](https://www.curseforge.com/minecraft/mc-mods/curios)
 
 ## Behavior
 
@@ -29,7 +31,7 @@ The `loot.tables` list accepts modded loot tables:
 The necklace by default supports the `necklace` and `charm` Curios slots.
 Leave the list empty to allow any slot.
 
-## Tiered necklaces
+## Necklaces
 
 There are four craftable tiers of the Spawner Necklace. They are off by default. Set `enabled = true` to turn them on. Tiers don't use progression.
 
