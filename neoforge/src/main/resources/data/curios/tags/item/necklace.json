@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "spawnercurio:spawner_necklace",
+    "spawnercurio:iron_spawner_necklace",
+    "spawnercurio:gold_spawner_necklace",
+    "spawnercurio:diamond_spawner_necklace",
+    "spawnercurio:netherite_spawner_necklace"
+  ]
+}

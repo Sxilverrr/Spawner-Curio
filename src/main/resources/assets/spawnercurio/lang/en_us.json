@@ -1,0 +1,18 @@
+{
+  "item.spawnercurio.spawner_necklace": "Spawner Necklace",
+  "item.spawnercurio.iron_spawner_necklace": "Iron Spawner Necklace",
+  "item.spawnercurio.gold_spawner_necklace": "Gold Spawner Necklace",
+  "item.spawnercurio.diamond_spawner_necklace": "Diamond Spawner Necklace",
+  "item.spawnercurio.netherite_spawner_necklace": "Netherite Spawner Necklace",
+  "tooltip.spawnercurio.on": "On",
+  "tooltip.spawnercurio.off": "Off",
+  "tooltip.spawnercurio.speed": "Spawner speed: %sx",
+  "tooltip.spawnercurio.range": "Range: %s blocks",
+  "tooltip.spawnercurio.level": "Level %s of %s",
+  "tooltip.spawnercurio.kills": "Kills: %s",
+  "tooltip.spawnercurio.spawners": "Spawners broken: %s",
+  "tooltip.spawnercurio.xp": "XP absorbed: %s",
+  "tooltip.spawnercurio.toggle": "Right click to turn on or off",
+  "message.spawnercurio.on": "%s turned on",
+  "message.spawnercurio.off": "%s turned off"
+}

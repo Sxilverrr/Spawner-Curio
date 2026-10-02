@@ -1,0 +1,29 @@
+{
+  "conditions": [
+    {
+      "type": "spawnercurio:craftable",
+      "necklace": "diamond_spawner_necklace"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ngn",
+    "gpg",
+    "ngn"
+  ],
+  "key": {
+    "n": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "g": {
+      "item": "minecraft:diamond"
+    },
+    "p": {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+  "result": {
+    "item": "spawnercurio:diamond_spawner_necklace",
+    "count": 1
+  }
+}

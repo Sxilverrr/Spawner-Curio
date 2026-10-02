@@ -1,0 +1,29 @@
+{
+  "conditions": [
+    {
+      "type": "spawnercurio:craftable",
+      "necklace": "iron_spawner_necklace"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ngn",
+    "gpg",
+    "ngn"
+  ],
+  "key": {
+    "n": {
+      "item": "minecraft:iron_nugget"
+    },
+    "g": {
+      "item": "minecraft:iron_ingot"
+    },
+    "p": {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+  "result": {
+    "item": "spawnercurio:iron_spawner_necklace",
+    "count": 1
+  }
+}
