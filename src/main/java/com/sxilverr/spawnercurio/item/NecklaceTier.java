@@ -18,7 +18,7 @@ public enum NecklaceTier {
     public double range;
     public boolean craftable;
     public boolean inLoot;
-    public Supplier<Item> item;
+    public Supplier<? extends Item> item;
 
     NecklaceTier(String id, double speed, double range, boolean enabled, boolean craftable, boolean inLoot) {
         this.id = id;

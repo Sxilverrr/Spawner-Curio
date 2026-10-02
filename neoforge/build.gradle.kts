@@ -3,7 +3,7 @@
 plugins {
     id("dev.architectury.loom")
     id("architectury-plugin")
-    id("com.github.johnrengelman.shadow")
+    id("com.gradleup.shadow")
 }
 
 val loader = prop("loom.platform")!!
@@ -64,7 +64,6 @@ loom {
 }
 
 java {
-    withSourcesJar()
     val java = if (stonecutter.eval(minecraft, ">=1.20.5"))
         JavaVersion.VERSION_21 else JavaVersion.VERSION_17
     targetCompatibility = java
@@ -78,7 +77,6 @@ tasks.jar {
 tasks.remapJar {
     input = tasks.shadowJar.get().archiveFile
     archiveClassifier = null
-    dependsOn(tasks.shadowJar)
 }
 
 tasks.shadowJar {
@@ -88,13 +86,14 @@ tasks.shadowJar {
 }
 
 tasks.processResources {
-    properties(listOf("META-INF/neoforge.mods.toml", "pack.mcmeta"),
+    val modernRecipes = stonecutter.eval(minecraft, ">=1.21.2")
+    exclude(if (modernRecipes) "data/spawnercurio/recipe/**" else "data/spawnercurio/recipe_1_21_2/**")
+    if (modernRecipes) eachFile { path = path.replace("/recipe_1_21_2/", "/recipe/") }
+    properties(listOf("META-INF/neoforge.mods.toml"),
         "id" to mod.id,
         "name" to mod.name,
         "version" to mod.version,
-        "minecraft" to common.mod.prop("mc_dep_forgelike"),
-        "pack_format" to common.mod.prop("pack_format"),
-        "data_pack_format" to common.mod.prop("data_pack_format")
+        "minecraft" to common.mod.prop("mc_dep_forgelike")
     )
 }
 
@@ -106,7 +105,6 @@ tasks.build {
 tasks.register<Copy>("buildAndCollect") {
     group = "versioned"
     description = "Must run through 'chiseledBuild'"
-    from(tasks.remapJar.get().archiveFile, tasks.remapSourcesJar.get().archiveFile)
-    into(rootProject.layout.buildDirectory.file("libs/${mod.version}/$loader"))
-    dependsOn("build")
+    from(tasks.remapJar)
+    into(rootProject.layout.buildDirectory.dir("libs/${mod.version}/$loader"))
 }

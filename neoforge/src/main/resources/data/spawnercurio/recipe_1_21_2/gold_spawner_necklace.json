@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "spawnercurio:craftable",
+      "necklace": "gold_spawner_necklace"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ngn",
+    "gpg",
+    "ngn"
+  ],
+  "key": {
+    "n": "minecraft:gold_nugget",
+    "g": "minecraft:gold_ingot",
+    "p": "minecraft:ender_pearl"
+  },
+  "result": {
+    "id": "spawnercurio:gold_spawner_necklace",
+    "count": 1
+  }
+}

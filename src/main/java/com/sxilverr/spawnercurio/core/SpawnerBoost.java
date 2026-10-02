@@ -8,6 +8,10 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
+//? if >=1.21.6 {
+/*import net.minecraft.util.ProblemReporter;
+import net.minecraft.world.level.storage.TagValueInput;
+*///?}
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.Level;
@@ -41,7 +45,12 @@ public final class SpawnerBoost {
             return;
         }
         Set<BlockPos> boosted = new HashSet<>();
-        if (SpawnerCurioConfig.dimensionAllowed(level.dimension().location().toString())) {
+        //? if >=1.21.11 {
+        /*String dimension = level.dimension().identifier().toString();
+        *///?} else {
+        String dimension = level.dimension().location().toString();
+        //?}
+        if (SpawnerCurioConfig.dimensionAllowed(dimension)) {
             for (ServerPlayer player : level.players()) {
                 boostFor(level, player, boosted);
             }
@@ -121,12 +130,12 @@ public final class SpawnerBoost {
     private static void apply(ServerLevel level, SpawnerBlockEntity spawner, int extra, boolean overrides,
                               Set<BlockPos> boosted) {
         CompoundTag tag = saveSpawner(level, spawner);
-        String mob = tag.getCompound("SpawnData").getCompound("entity").getString("id");
+        String mob = Nbt.getString(Nbt.getCompound(Nbt.getCompound(tag, "SpawnData"), "entity"), "id");
         if (SpawnerCurioConfig.blockedMobs.contains(mob)) {
             return;
         }
         boolean changed = false;
-        short delay = tag.getShort(DELAY);
+        short delay = Nbt.getShort(tag, DELAY);
         if (extra > 0 && delay > 0) {
             tag.putShort(DELAY, (short) Math.max(0, delay - extra));
             changed = true;
@@ -134,7 +143,7 @@ public final class SpawnerBoost {
         if (overrides) {
             BlockPos pos = spawner.getBlockPos().immutable();
             ORIGINALS.computeIfAbsent(level.dimension(), key -> new HashMap<>()).putIfAbsent(pos, new int[] {
-                    tag.getShort(SPAWN_COUNT), tag.getShort(MAX_NEARBY), tag.getShort(PLAYER_RANGE) });
+                    Nbt.getShort(tag, SPAWN_COUNT), Nbt.getShort(tag, MAX_NEARBY), Nbt.getShort(tag, PLAYER_RANGE) });
             changed |= override(tag, SPAWN_COUNT, SpawnerCurioConfig.spawnCount);
             changed |= override(tag, MAX_NEARBY, SpawnerCurioConfig.maxNearbyEntities);
             changed |= override(tag, PLAYER_RANGE, SpawnerCurioConfig.requiredPlayerRange);
@@ -147,7 +156,7 @@ public final class SpawnerBoost {
     }
 
     private static boolean override(CompoundTag tag, String key, int value) {
-        if (value < 0 || tag.getShort(key) == (short) value) {
+        if (value < 0 || Nbt.getShort(tag, key) == (short) value) {
             return false;
         }
         tag.putShort(key, (short) value);
@@ -177,8 +186,10 @@ public final class SpawnerBoost {
     private static void loadSpawner(ServerLevel level, SpawnerBlockEntity spawner, CompoundTag tag) {
         //? if <1.20.5 {
         spawner.load(tag);
-        //?} else {
+        //?} else if <1.21.6 {
         /*spawner.loadWithComponents(tag, level.registryAccess());
+        *///?} else {
+        /*spawner.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, level.registryAccess(), tag));
         *///?}
     }
 }

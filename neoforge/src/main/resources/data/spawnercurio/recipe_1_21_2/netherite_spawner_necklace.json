@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "spawnercurio:craftable",
+      "necklace": "netherite_spawner_necklace"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "qsq",
+    "ipi",
+    "qsq"
+  ],
+  "key": {
+    "q": "minecraft:quartz",
+    "s": "minecraft:netherite_scrap",
+    "i": "minecraft:netherite_ingot",
+    "p": "minecraft:nether_star"
+  },
+  "result": {
+    "id": "spawnercurio:netherite_spawner_necklace",
+    "count": 1
+  }
+}

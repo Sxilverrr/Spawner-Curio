@@ -6,9 +6,7 @@ import com.sxilverr.spawnercurio.config.SpawnerCurioConfig;
 import com.sxilverr.spawnercurio.core.NecklaceData;
 import com.sxilverr.spawnercurio.item.NecklaceTier;
 import com.sxilverr.spawnercurio.item.SpawnerNecklaceItem;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -26,12 +24,11 @@ import java.util.List;
 @Mod(SpawnerCurio.MOD_ID)
 public final class SpawnerCurioNeoForge {
 
-    public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(BuiltInRegistries.ITEM, SpawnerCurio.MOD_ID);
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SpawnerCurio.MOD_ID);
 
     static {
         for (NecklaceTier tier : NecklaceTier.values()) {
-            tier.item = ITEMS.register(tier.id, () -> new NeoForgeNecklaceItem(tier, new Item.Properties().stacksTo(1)));
+            tier.item = ITEMS.registerItem(tier.id, properties -> new NeoForgeNecklaceItem(tier, properties.stacksTo(1)));
         }
     }
 

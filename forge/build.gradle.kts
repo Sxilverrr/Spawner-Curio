@@ -3,7 +3,7 @@
 plugins {
     id("dev.architectury.loom")
     id("architectury-plugin")
-    id("com.github.johnrengelman.shadow")
+    id("com.gradleup.shadow")
 }
 
 val loader = prop("loom.platform")!!
@@ -64,7 +64,6 @@ loom {
 }
 
 java {
-    withSourcesJar()
     val java = if (stonecutter.eval(minecraft, ">=1.20.5"))
         JavaVersion.VERSION_21 else JavaVersion.VERSION_17
     targetCompatibility = java
@@ -78,7 +77,6 @@ tasks.jar {
 tasks.remapJar {
     input = tasks.shadowJar.get().archiveFile
     archiveClassifier = null
-    dependsOn(tasks.shadowJar)
 }
 
 tasks.shadowJar {
@@ -107,7 +105,6 @@ tasks.build {
 tasks.register<Copy>("buildAndCollect") {
     group = "versioned"
     description = "Must run through 'chiseledBuild'"
-    from(tasks.remapJar.get().archiveFile, tasks.remapSourcesJar.get().archiveFile)
-    into(rootProject.layout.buildDirectory.file("libs/${mod.version}/$loader"))
-    dependsOn("build")
+    from(tasks.remapJar)
+    into(rootProject.layout.buildDirectory.dir("libs/${mod.version}/$loader"))
 }

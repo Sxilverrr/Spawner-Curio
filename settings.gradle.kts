@@ -19,9 +19,9 @@ stonecutter {
     kotlinController = true
     create(rootProject) {
 
-        versions("1.20.1", "1.21.1")
+        versions("1.20.1", "1.21.1", "1.21.11")
         branch("forge")    { versions("1.20.1") }
-        branch("neoforge") { versions("1.21.1") }
+        branch("neoforge") { versions("1.21.1", "1.21.11") }
     }
 }
 

@@ -35,8 +35,13 @@ public final class NecklaceData {
         }
         Inventory inventory = player.getInventory();
         if (SpawnerCurioConfig.worksInInventory) {
+            //? if >=1.21.5 {
+            /*found.addAll(inventory.getNonEquipmentItems());
+            found.add(player.getOffhandItem());
+            *///?} else {
             found.addAll(inventory.items);
             found.addAll(inventory.offhand);
+            //?}
         } else if (SpawnerCurioConfig.worksInHand) {
             found.add(player.getMainHandItem());
             found.add(player.getOffhandItem());
@@ -47,7 +52,7 @@ public final class NecklaceData {
 
     public static boolean isOn(ItemStack stack) {
         CompoundTag root = root(stack);
-        return root.contains(ON) ? root.getBoolean(ON) : SpawnerCurioConfig.defaultOn;
+        return Nbt.getBoolean(root, ON, SpawnerCurioConfig.defaultOn);
     }
 
     public static void setOn(ItemStack stack, boolean on) {
@@ -57,15 +62,15 @@ public final class NecklaceData {
     }
 
     public static int kills(ItemStack stack) {
-        return root(stack).getInt(KILLS);
+        return Nbt.getInt(root(stack), KILLS);
     }
 
     public static int spawners(ItemStack stack) {
-        return root(stack).getInt(SPAWNERS);
+        return Nbt.getInt(root(stack), SPAWNERS);
     }
 
     public static int xp(ItemStack stack) {
-        return root(stack).getInt(XP);
+        return Nbt.getInt(root(stack), XP);
     }
 
     public static void addXp(ItemStack stack, int amount) {
@@ -82,12 +87,12 @@ public final class NecklaceData {
 
     private static void increment(ItemStack stack, String key, int amount) {
         CompoundTag root = root(stack);
-        root.putInt(key, root.getInt(key) + amount);
+        root.putInt(key, Nbt.getInt(root, key) + amount);
         store(stack, root);
     }
 
     private static CompoundTag root(ItemStack stack) {
-        return read(stack).getCompound(ROOT);
+        return Nbt.getCompound(read(stack), ROOT);
     }
 
     private static void store(ItemStack stack, CompoundTag root) {

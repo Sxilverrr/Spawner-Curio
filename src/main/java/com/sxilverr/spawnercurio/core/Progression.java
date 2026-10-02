@@ -40,7 +40,7 @@ public final class Progression {
 
     public static int absorbXp(Player player, int amount) {
         if (!SpawnerCurioConfig.progressionEnabled || !SpawnerCurioConfig.progressionFromXp || amount <= 0
-                || player.level().isClientSide) {
+                || player.level().isClientSide()) {
             return amount;
         }
         for (ItemStack stack : progressing(player)) {
@@ -56,14 +56,14 @@ public final class Progression {
 
     public static void onKill(Player player) {
         if (SpawnerCurioConfig.progressionEnabled && SpawnerCurioConfig.progressionFromKills
-                && !player.level().isClientSide) {
+                && !player.level().isClientSide()) {
             progressing(player).forEach(NecklaceData::addKill);
         }
     }
 
     public static void onSpawnerBroken(Player player) {
         if (SpawnerCurioConfig.progressionEnabled && SpawnerCurioConfig.progressionFromSpawners
-                && !player.level().isClientSide) {
+                && !player.level().isClientSide()) {
             progressing(player).forEach(NecklaceData::addSpawner);
         }
     }

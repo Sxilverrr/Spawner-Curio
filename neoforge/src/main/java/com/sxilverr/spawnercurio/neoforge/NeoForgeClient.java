@@ -5,10 +5,16 @@ import com.sxilverr.spawnercurio.SpawnerCurio;
 import com.sxilverr.spawnercurio.client.NecklaceModel;
 import com.sxilverr.spawnercurio.item.NecklaceTier;
 import net.minecraft.client.model.EntityModel;
-import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.RenderLayerParent;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
+//? if >=1.21.11 {
+/*import net.minecraft.client.renderer.SubmitNodeCollector;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
+*///?} else {
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.world.entity.LivingEntity;
+//?}
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -38,6 +44,15 @@ public final class NeoForgeClient {
             model = new NecklaceModel(tier);
         }
 
+        //? if >=1.21.11 {
+        /*@Override
+        public <S extends LivingEntityRenderState, M extends EntityModel<? super S>> void render(
+                ItemStack stack, SlotContext slotContext, PoseStack poseStack, SubmitNodeCollector collector,
+                int light, S state, RenderLayerParent<S, M> parent, EntityRendererProvider.Context context,
+                float yRotation, float xRotation) {
+            model.submit(parent.getModel(), poseStack, collector, light, state.ageInTicks);
+        }
+        *///?} else {
         @Override
         public <T extends LivingEntity, M extends EntityModel<T>> void render(
                 ItemStack stack, SlotContext slotContext, PoseStack poseStack, RenderLayerParent<T, M> parent,
@@ -45,5 +60,6 @@ public final class NeoForgeClient {
                 float ageInTicks, float netHeadYaw, float headPitch) {
             model.render(parent.getModel(), poseStack, buffers, light, ageInTicks);
         }
+        //?}
     }
 }
