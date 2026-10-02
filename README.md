@@ -14,7 +14,7 @@ Right-click it in hand to switch it off and on.
 
 By default the necklace is **not craftable**. it can be found in chest loot, in dungeons, mineshafts, strongholds, fortresses, bastions, mansions and ancient cities chests. It is 5% chance by default.
 
-Set `crafting.enabled = true` to enable the recipe and then `/reload`.
+Set `spawner_necklace.craftable = true` to enable the recipe and then `/reload`.
 
 The `loot.tables` list accepts modded loot tables:
 
@@ -29,7 +29,28 @@ The `loot.tables` list accepts modded loot tables:
 The necklace by default supports the `necklace` and `charm` Curios slots.
 Leave the list empty to allow any slot.
 
+## Tiered necklaces
+
+There are four craftable tiers of the Spawner Necklace. They are off by default. Set `enabled = true` to turn them on. Tiers don't use progression.
+
+| Section | Speed | Range |
+|---------|-------|-------|
+| `iron_spawner_necklace` | 1.5x | 12 |
+| `gold_spawner_necklace` | 2x | 16 |
+| `diamond_spawner_necklace` | 5x | 24 |
+| `netherite_spawner_necklace` | 10x | 32 |
+
+Every necklace section, `spawner_necklace` included, has these keys:
+
+| Key | Purpose |
+|-----|--------------|
+| `enabled` | Turns the item on. When off it does nothing and is hidden from the creative tab. |
+| `speed_multiplier` | Spawner speed. |
+| `range` | Range in blocks. |
+| `craftable` | Allows the recipe. `/reload` after changes. |
+| `in_loot` | Lets it show up in the `loot.tables` chests. |
+
 ## Config
 
 `config/spawnercurio-common.toml`, is grouped into `general`, `slots`, `toggle`, `item`, `progression`,
-`spawner`, and `filters`.
+`spawner`, `filters`, `loot`, and one section per necklace.
