@@ -7,6 +7,8 @@ Right-click it in hand to switch it off and on.
 
 Requires [Curios API.](https://www.curseforge.com/minecraft/mc-mods/curios)
 
+Requires [Architectury API.](https://www.curseforge.com/minecraft/mc-mods/architectury-api)
+
 ## Behavior
 
 - Speeds up every spawner within range of the wearer.
