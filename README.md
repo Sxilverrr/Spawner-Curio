@@ -12,6 +12,7 @@ Requires [Architectury API.](https://www.curseforge.com/minecraft/mc-mods/archit
 ## Behavior
 
 - Speeds up every spawner within range of the wearer.
+- Necklaces from different players do not stack by default. The fastest one takes priority. Set `general.stack_necklaces = true` to add them up.
 - Optional progression: the necklace can start weak and level up from mob kills, breaking spawners, and xp.
 
 ## Obtaining
@@ -40,9 +41,9 @@ There are four craftable tiers of the Spawner Necklace. They are off by default.
 | Section | Speed | Range |
 |---------|-------|-------|
 | `iron_spawner_necklace` | 1.5x | 12 |
-| `gold_spawner_necklace` | 2x | 16 |
-| `diamond_spawner_necklace` | 5x | 24 |
-| `netherite_spawner_necklace` | 10x | 32 |
+| `gold_spawner_necklace` | 2x | 14 |
+| `diamond_spawner_necklace` | 3x | 16 |
+| `netherite_spawner_necklace` | 5x | 18 |
 
 Every necklace section, `spawner_necklace` included, has these keys:
 

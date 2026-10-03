@@ -44,7 +44,7 @@ public final class SpawnerBoost {
         if (level.getGameTime() % SpawnerCurioConfig.checkInterval != 0) {
             return;
         }
-        Set<BlockPos> boosted = new HashSet<>();
+        Map<SpawnerBlockEntity, Integer> extras = new HashMap<>();
         //? if >=1.21.11 {
         /*String dimension = level.dimension().identifier().toString();
         *///?} else {
@@ -52,9 +52,12 @@ public final class SpawnerBoost {
         //?}
         if (SpawnerCurioConfig.dimensionAllowed(dimension)) {
             for (ServerPlayer player : level.players()) {
-                boostFor(level, player, boosted);
+                boostFor(level, player, extras);
             }
         }
+        Set<BlockPos> boosted = new HashSet<>();
+        boolean overrides = SpawnerCurioConfig.hasSpawnerOverrides();
+        extras.forEach((spawner, extra) -> apply(level, spawner, extra, overrides, boosted));
         restoreWhere(level, pos -> !boosted.contains(pos));
     }
 
@@ -83,19 +86,18 @@ public final class SpawnerBoost {
         });
     }
 
-    private static void boostFor(ServerLevel level, ServerPlayer player, Set<BlockPos> boosted) {
+    private static void boostFor(ServerLevel level, ServerPlayer player, Map<SpawnerBlockEntity, Integer> extras) {
         ItemStack best = NecklaceData.active(player).stream()
                 .max(Comparator.comparingDouble(Progression::speed)).orElse(null);
         if (best == null) {
             return;
         }
         int extra = (int) Math.round(SpawnerCurioConfig.checkInterval * (Progression.speed(best) - 1.0));
-        boolean overrides = SpawnerCurioConfig.hasSpawnerOverrides();
-        if (extra <= 0 && !overrides) {
+        if (extra <= 0 && !SpawnerCurioConfig.hasSpawnerOverrides()) {
             return;
         }
         for (SpawnerBlockEntity spawner : nearbySpawners(level, player, Progression.radius(best))) {
-            apply(level, spawner, extra, overrides, boosted);
+            extras.merge(spawner, extra, SpawnerCurioConfig.stackNecklaces ? Integer::sum : Math::max);
         }
     }
 

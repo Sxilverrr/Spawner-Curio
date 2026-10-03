@@ -12,6 +12,7 @@ public final class SpawnerCurioConfig {
 
     public static int checkInterval = 20;
     public static int maxSpawners = 8;
+    public static boolean stackNecklaces = false;
 
     public static boolean worksInCurioSlot = true;
     public static boolean worksInHand = false;

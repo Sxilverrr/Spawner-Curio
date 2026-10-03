@@ -6,11 +6,11 @@ import java.util.Arrays;
 import java.util.function.Supplier;
 
 public enum NecklaceTier {
-    SPAWNER("spawner_necklace", 2.0, 16.0, true, false, true),
+    SPAWNER("spawner_necklace", 2.0, 12.0, true, false, true),
     IRON("iron_spawner_necklace", 1.5, 12.0, false, true, false),
-    GOLD("gold_spawner_necklace", 2.0, 16.0, false, true, false),
-    DIAMOND("diamond_spawner_necklace", 5.0, 24.0, false, true, false),
-    NETHERITE("netherite_spawner_necklace", 10.0, 32.0, false, true, false);
+    GOLD("gold_spawner_necklace", 2.0, 14.0, false, true, false),
+    DIAMOND("diamond_spawner_necklace", 3.0, 16.0, false, true, false),
+    NETHERITE("netherite_spawner_necklace", 5.0, 18.0, false, true, false);
 
     public final String id;
     public boolean enabled;

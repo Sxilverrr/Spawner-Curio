@@ -29,6 +29,8 @@ public final class NeoForgeConfig {
                 .defineInRange("check_interval", checkInterval, 1, 200), v -> checkInterval = v);
         bind(BUILDER.comment("Max spawners boosted per player. Closest first.")
                 .defineInRange("max_spawners", maxSpawners, 1, 256), v -> maxSpawners = v);
+        bind(BUILDER.comment("Necklaces from different players add up on the same spawner. When off, the fastest one takes priority.")
+                .define("stack_necklaces", stackNecklaces), v -> stackNecklaces = v);
         BUILDER.pop();
 
         BUILDER.comment("Where the necklace works.").push("slots");
