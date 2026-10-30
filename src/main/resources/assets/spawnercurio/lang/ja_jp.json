@@ -1,0 +1,18 @@
+{
+  "item.spawnercurio.spawner_necklace": "スポナーネックレス",
+  "item.spawnercurio.iron_spawner_necklace": "鉄のスポナーネックレス",
+  "item.spawnercurio.gold_spawner_necklace": "金のスポナーネックレス",
+  "item.spawnercurio.diamond_spawner_necklace": "ダイヤモンドのスポナーネックレス",
+  "item.spawnercurio.netherite_spawner_necklace": "ネザライトのスポナーネックレス",
+  "tooltip.spawnercurio.on": "オン",
+  "tooltip.spawnercurio.off": "オフ",
+  "tooltip.spawnercurio.speed": "スポナー速度：%s倍",
+  "tooltip.spawnercurio.range": "範囲：%sブロック",
+  "tooltip.spawnercurio.level": "レベル：%s/%s",
+  "tooltip.spawnercurio.kills": "Mobを倒した数：%s",
+  "tooltip.spawnercurio.spawners": "壊したスポナー：%s",
+  "tooltip.spawnercurio.xp": "吸収した経験値：%s",
+  "tooltip.spawnercurio.toggle": "右クリックでオン/オフを切り替え",
+  "message.spawnercurio.on": "%sをオンにしました",
+  "message.spawnercurio.off": "%sをオフにしました"
+}

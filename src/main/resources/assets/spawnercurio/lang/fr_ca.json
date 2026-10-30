@@ -1,0 +1,18 @@
+{
+  "item.spawnercurio.spawner_necklace": "Collier de spawneur",
+  "item.spawnercurio.iron_spawner_necklace": "Collier de spawneur en fer",
+  "item.spawnercurio.gold_spawner_necklace": "Collier de spawneur en or",
+  "item.spawnercurio.diamond_spawner_necklace": "Collier de spawneur en diamant",
+  "item.spawnercurio.netherite_spawner_necklace": "Collier de spawneur en netherite",
+  "tooltip.spawnercurio.on": "Activé",
+  "tooltip.spawnercurio.off": "Désactivé",
+  "tooltip.spawnercurio.speed": "Vitesse du spawneur : %sx",
+  "tooltip.spawnercurio.range": "Portée : %s blocs",
+  "tooltip.spawnercurio.level": "Niveau %s sur %s",
+  "tooltip.spawnercurio.kills": "Mobs tués : %s",
+  "tooltip.spawnercurio.spawners": "Spawneurs détruits : %s",
+  "tooltip.spawnercurio.xp": "Expérience absorbée : %s",
+  "tooltip.spawnercurio.toggle": "Clic droit pour activer ou désactiver",
+  "message.spawnercurio.on": "%s activé",
+  "message.spawnercurio.off": "%s désactivé"
+}

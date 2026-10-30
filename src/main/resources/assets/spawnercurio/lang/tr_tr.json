@@ -1,0 +1,18 @@
+{
+  "item.spawnercurio.spawner_necklace": "Canavar Çağırıcı Kolyesi",
+  "item.spawnercurio.iron_spawner_necklace": "Demir Canavar Çağırıcı Kolyesi",
+  "item.spawnercurio.gold_spawner_necklace": "Altın Canavar Çağırıcı Kolyesi",
+  "item.spawnercurio.diamond_spawner_necklace": "Elmas Canavar Çağırıcı Kolyesi",
+  "item.spawnercurio.netherite_spawner_necklace": "Netherit Canavar Çağırıcı Kolyesi",
+  "tooltip.spawnercurio.on": "Açık",
+  "tooltip.spawnercurio.off": "Kapalı",
+  "tooltip.spawnercurio.speed": "Çağırıcı hızı: %sx",
+  "tooltip.spawnercurio.range": "Menzil: %s blok",
+  "tooltip.spawnercurio.level": "Seviye %s / %s",
+  "tooltip.spawnercurio.kills": "Öldürülen canlılar: %s",
+  "tooltip.spawnercurio.spawners": "Kırılan çağırıcılar: %s",
+  "tooltip.spawnercurio.xp": "Emilen tecrübe: %s",
+  "tooltip.spawnercurio.toggle": "Açmak veya kapatmak için sağ tıklayın",
+  "message.spawnercurio.on": "%s açıldı",
+  "message.spawnercurio.off": "%s kapatıldı"
+}

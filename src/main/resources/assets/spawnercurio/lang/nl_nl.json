@@ -1,0 +1,18 @@
+{
+  "item.spawnercurio.spawner_necklace": "Monsterkooihalsketting",
+  "item.spawnercurio.iron_spawner_necklace": "IJzeren monsterkooihalsketting",
+  "item.spawnercurio.gold_spawner_necklace": "Gouden monsterkooihalsketting",
+  "item.spawnercurio.diamond_spawner_necklace": "Diamanten monsterkooihalsketting",
+  "item.spawnercurio.netherite_spawner_necklace": "Netherieten monsterkooihalsketting",
+  "tooltip.spawnercurio.on": "Aan",
+  "tooltip.spawnercurio.off": "Uit",
+  "tooltip.spawnercurio.speed": "Snelheid monsterkooi: %sx",
+  "tooltip.spawnercurio.range": "Bereik: %s blokken",
+  "tooltip.spawnercurio.level": "Niveau %s van %s",
+  "tooltip.spawnercurio.kills": "Wezens gedood: %s",
+  "tooltip.spawnercurio.spawners": "Monsterkooien vernietigd: %s",
+  "tooltip.spawnercurio.xp": "Ervaring opgenomen: %s",
+  "tooltip.spawnercurio.toggle": "Rechtsklik om aan of uit te zetten",
+  "message.spawnercurio.on": "%s staat aan",
+  "message.spawnercurio.off": "%s staat uit"
+}

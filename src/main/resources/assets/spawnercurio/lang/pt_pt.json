@@ -1,0 +1,18 @@
+{
+  "item.spawnercurio.spawner_necklace": "Colar Gerador",
+  "item.spawnercurio.iron_spawner_necklace": "Colar Gerador de Ferro",
+  "item.spawnercurio.gold_spawner_necklace": "Colar Gerador de Ouro",
+  "item.spawnercurio.diamond_spawner_necklace": "Colar Gerador de Diamante",
+  "item.spawnercurio.netherite_spawner_necklace": "Colar Gerador de Netherite",
+  "tooltip.spawnercurio.on": "Ativado",
+  "tooltip.spawnercurio.off": "Desativado",
+  "tooltip.spawnercurio.speed": "Velocidade do gerador: %sx",
+  "tooltip.spawnercurio.range": "Alcance: %s blocos",
+  "tooltip.spawnercurio.level": "Nível %s de %s",
+  "tooltip.spawnercurio.kills": "Criaturas mortas: %s",
+  "tooltip.spawnercurio.spawners": "Geradores destruídos: %s",
+  "tooltip.spawnercurio.xp": "Experiência absorvida: %s",
+  "tooltip.spawnercurio.toggle": "Clica com o botão direito para ativar ou desativar",
+  "message.spawnercurio.on": "%s ativado",
+  "message.spawnercurio.off": "%s desativado"
+}

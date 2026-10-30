@@ -1,0 +1,18 @@
+{
+  "item.spawnercurio.spawner_necklace": "Spawner-Halskette",
+  "item.spawnercurio.iron_spawner_necklace": "Eisen-Spawner-Halskette",
+  "item.spawnercurio.gold_spawner_necklace": "Gold-Spawner-Halskette",
+  "item.spawnercurio.diamond_spawner_necklace": "Diamant-Spawner-Halskette",
+  "item.spawnercurio.netherite_spawner_necklace": "Netherit-Spawner-Halskette",
+  "tooltip.spawnercurio.on": "Aktiviert",
+  "tooltip.spawnercurio.off": "Deaktiviert",
+  "tooltip.spawnercurio.speed": "Spawner-Geschwindigkeit: %sx",
+  "tooltip.spawnercurio.range": "Reichweite: %s Blöcke",
+  "tooltip.spawnercurio.level": "Stufe %s von %s",
+  "tooltip.spawnercurio.kills": "Kreaturen erlegt: %s",
+  "tooltip.spawnercurio.spawners": "Spawner zerstört: %s",
+  "tooltip.spawnercurio.xp": "Erfahrung aufgenommen: %s",
+  "tooltip.spawnercurio.toggle": "Rechtsklick zum Aktivieren oder Deaktivieren",
+  "message.spawnercurio.on": "%s aktiviert",
+  "message.spawnercurio.off": "%s deaktiviert"
+}

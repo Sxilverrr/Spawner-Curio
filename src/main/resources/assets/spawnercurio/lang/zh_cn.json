@@ -1,0 +1,18 @@
+{
+  "item.spawnercurio.spawner_necklace": "刷怪笼项链",
+  "item.spawnercurio.iron_spawner_necklace": "铁刷怪笼项链",
+  "item.spawnercurio.gold_spawner_necklace": "金刷怪笼项链",
+  "item.spawnercurio.diamond_spawner_necklace": "钻石刷怪笼项链",
+  "item.spawnercurio.netherite_spawner_necklace": "下界合金刷怪笼项链",
+  "tooltip.spawnercurio.on": "已开启",
+  "tooltip.spawnercurio.off": "已关闭",
+  "tooltip.spawnercurio.speed": "刷怪速度：%s倍",
+  "tooltip.spawnercurio.range": "范围：%s格",
+  "tooltip.spawnercurio.level": "等级：%s/%s",
+  "tooltip.spawnercurio.kills": "生物击杀数：%s",
+  "tooltip.spawnercurio.spawners": "已破坏刷怪笼：%s",
+  "tooltip.spawnercurio.xp": "已吸收经验：%s",
+  "tooltip.spawnercurio.toggle": "右键开启或关闭",
+  "message.spawnercurio.on": "%s已开启",
+  "message.spawnercurio.off": "%s已关闭"
+}

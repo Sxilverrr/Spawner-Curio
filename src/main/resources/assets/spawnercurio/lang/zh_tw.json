@@ -1,0 +1,18 @@
+{
+  "item.spawnercurio.spawner_necklace": "生怪磚項鍊",
+  "item.spawnercurio.iron_spawner_necklace": "鐵製生怪磚項鍊",
+  "item.spawnercurio.gold_spawner_necklace": "黃金生怪磚項鍊",
+  "item.spawnercurio.diamond_spawner_necklace": "鑽石生怪磚項鍊",
+  "item.spawnercurio.netherite_spawner_necklace": "獄髓生怪磚項鍊",
+  "tooltip.spawnercurio.on": "已開啟",
+  "tooltip.spawnercurio.off": "已關閉",
+  "tooltip.spawnercurio.speed": "生怪速度：%s 倍",
+  "tooltip.spawnercurio.range": "範圍：%s 格",
+  "tooltip.spawnercurio.level": "等級：%s/%s",
+  "tooltip.spawnercurio.kills": "生物擊殺數：%s",
+  "tooltip.spawnercurio.spawners": "已破壞生怪磚：%s",
+  "tooltip.spawnercurio.xp": "已吸收經驗值：%s",
+  "tooltip.spawnercurio.toggle": "按右鍵開啟或關閉",
+  "message.spawnercurio.on": "%s 已開啟",
+  "message.spawnercurio.off": "%s 已關閉"
+}

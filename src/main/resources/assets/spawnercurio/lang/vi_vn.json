@@ -1,0 +1,18 @@
+{
+  "item.spawnercurio.spawner_necklace": "Dây chuyền lồng triệu hồi",
+  "item.spawnercurio.iron_spawner_necklace": "Dây chuyền lồng triệu hồi bằng sắt",
+  "item.spawnercurio.gold_spawner_necklace": "Dây chuyền lồng triệu hồi bằng vàng",
+  "item.spawnercurio.diamond_spawner_necklace": "Dây chuyền lồng triệu hồi bằng kim cương",
+  "item.spawnercurio.netherite_spawner_necklace": "Dây chuyền lồng triệu hồi bằng Netherit",
+  "tooltip.spawnercurio.on": "Bật",
+  "tooltip.spawnercurio.off": "Tắt",
+  "tooltip.spawnercurio.speed": "Tốc độ lồng triệu hồi: %sx",
+  "tooltip.spawnercurio.range": "Phạm vi: %s khối",
+  "tooltip.spawnercurio.level": "Cấp %s/%s",
+  "tooltip.spawnercurio.kills": "Số sinh vật đã giết: %s",
+  "tooltip.spawnercurio.spawners": "Số lồng triệu hồi đã phá: %s",
+  "tooltip.spawnercurio.xp": "Kinh nghiệm đã hấp thụ: %s",
+  "tooltip.spawnercurio.toggle": "Nhấp chuột phải để bật hoặc tắt",
+  "message.spawnercurio.on": "Đã bật %s",
+  "message.spawnercurio.off": "Đã tắt %s"
+}

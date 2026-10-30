@@ -1,0 +1,18 @@
+{
+  "item.spawnercurio.spawner_necklace": "Kalung Pembangkit",
+  "item.spawnercurio.iron_spawner_necklace": "Kalung Pembangkit Besi",
+  "item.spawnercurio.gold_spawner_necklace": "Kalung Pembangkit Emas",
+  "item.spawnercurio.diamond_spawner_necklace": "Kalung Pembangkit Berlian",
+  "item.spawnercurio.netherite_spawner_necklace": "Kalung Pembangkit Netherit",
+  "tooltip.spawnercurio.on": "Aktif",
+  "tooltip.spawnercurio.off": "Nonaktif",
+  "tooltip.spawnercurio.speed": "Kecepatan pembangkit: %sx",
+  "tooltip.spawnercurio.range": "Jangkauan: %s balok",
+  "tooltip.spawnercurio.level": "Tingkat %s dari %s",
+  "tooltip.spawnercurio.kills": "Makhluk dibunuh: %s",
+  "tooltip.spawnercurio.spawners": "Pembangkit dihancurkan: %s",
+  "tooltip.spawnercurio.xp": "Pengalaman diserap: %s",
+  "tooltip.spawnercurio.toggle": "Klik kanan untuk mengaktifkan atau menonaktifkan",
+  "message.spawnercurio.on": "%s diaktifkan",
+  "message.spawnercurio.off": "%s dinonaktifkan"
+}

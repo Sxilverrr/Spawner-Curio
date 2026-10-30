@@ -1,0 +1,18 @@
+{
+  "item.spawnercurio.spawner_necklace": "Náhrdelník líhně",
+  "item.spawnercurio.iron_spawner_necklace": "Železný náhrdelník líhně",
+  "item.spawnercurio.gold_spawner_necklace": "Zlatý náhrdelník líhně",
+  "item.spawnercurio.diamond_spawner_necklace": "Diamantový náhrdelník líhně",
+  "item.spawnercurio.netherite_spawner_necklace": "Netheritový náhrdelník líhně",
+  "tooltip.spawnercurio.on": "Zapnuto",
+  "tooltip.spawnercurio.off": "Vypnuto",
+  "tooltip.spawnercurio.speed": "Rychlost líhní: %sx",
+  "tooltip.spawnercurio.range": "Dosah v blocích: %s",
+  "tooltip.spawnercurio.level": "Úroveň %s z %s",
+  "tooltip.spawnercurio.kills": "Zabito stvoření: %s",
+  "tooltip.spawnercurio.spawners": "Zničeno líhní: %s",
+  "tooltip.spawnercurio.xp": "Pohlceno zkušeností: %s",
+  "tooltip.spawnercurio.toggle": "Klikni pravým tlačítkem pro zapnutí nebo vypnutí",
+  "message.spawnercurio.on": "%s zapnut",
+  "message.spawnercurio.off": "%s vypnut"
+}

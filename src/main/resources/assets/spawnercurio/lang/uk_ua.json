@@ -1,0 +1,18 @@
+{
+  "item.spawnercurio.spawner_necklace": "Намисто породжувача",
+  "item.spawnercurio.iron_spawner_necklace": "Залізне намисто породжувача",
+  "item.spawnercurio.gold_spawner_necklace": "Золоте намисто породжувача",
+  "item.spawnercurio.diamond_spawner_necklace": "Діамантове намисто породжувача",
+  "item.spawnercurio.netherite_spawner_necklace": "Незеритове намисто породжувача",
+  "tooltip.spawnercurio.on": "Увімкнено",
+  "tooltip.spawnercurio.off": "Вимкнено",
+  "tooltip.spawnercurio.speed": "Швидкість породжувача: %sx",
+  "tooltip.spawnercurio.range": "Радіус у блоках: %s",
+  "tooltip.spawnercurio.level": "Рівень %s з %s",
+  "tooltip.spawnercurio.kills": "Мобів убито: %s",
+  "tooltip.spawnercurio.spawners": "Породжувачів зламано: %s",
+  "tooltip.spawnercurio.xp": "Досвіду поглинуто: %s",
+  "tooltip.spawnercurio.toggle": "Натисніть ПКМ, щоб увімкнути або вимкнути",
+  "message.spawnercurio.on": "%s увімкнено",
+  "message.spawnercurio.off": "%s вимкнено"
+}

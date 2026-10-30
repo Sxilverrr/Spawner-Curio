@@ -1,0 +1,18 @@
+{
+  "item.spawnercurio.spawner_necklace": "생성기 목걸이",
+  "item.spawnercurio.iron_spawner_necklace": "철 생성기 목걸이",
+  "item.spawnercurio.gold_spawner_necklace": "금 생성기 목걸이",
+  "item.spawnercurio.diamond_spawner_necklace": "다이아몬드 생성기 목걸이",
+  "item.spawnercurio.netherite_spawner_necklace": "네더라이트 생성기 목걸이",
+  "tooltip.spawnercurio.on": "켜짐",
+  "tooltip.spawnercurio.off": "꺼짐",
+  "tooltip.spawnercurio.speed": "생성기 속도: %s배",
+  "tooltip.spawnercurio.range": "범위: %s블록",
+  "tooltip.spawnercurio.level": "레벨 %s/%s",
+  "tooltip.spawnercurio.kills": "몹 사냥 횟수: %s",
+  "tooltip.spawnercurio.spawners": "부순 생성기: %s",
+  "tooltip.spawnercurio.xp": "흡수한 경험치: %s",
+  "tooltip.spawnercurio.toggle": "우클릭하여 켜기/끄기",
+  "message.spawnercurio.on": "%s 켜짐",
+  "message.spawnercurio.off": "%s 꺼짐"
+}
